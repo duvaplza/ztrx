@@ -1,0 +1,111 @@
+body {
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#backgroundCanvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.neon-text {
+    font-size: 2rem;
+    color: #FF007F; /* Color rosa neón */
+    text-shadow: 0 0 10px rgba(255, 0, 179, 0.8),
+                 0 0 20px rgba(255, 0, 179, 0.8),
+                 0 0 30px rgba(255, 0, 179, 0.8),
+                 0 0 40px rgba(255, 0, 179, 0.8),
+                 0 0 50px rgba(255, 0, 179, 0.8);
+}
+
+.line-up-img {
+    margin-top: 20px;
+    width: 25%; /* Ajuste para tamaño normal */
+    height: auto;
+    border: 0.1px solid #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                0 0 20px rgba(255, 255, 255, 0.8),
+                0 0 30px rgba(255, 255, 255, 0.8),
+                0 0 40px rgba(255, 255, 255, 0.8),
+                0 0 50px rgba(255, 255, 255, 0.8);
+}
+
+.countdown {
+    font-size: 1.5rem;
+    color: #39FF14; /* Verde neón */
+    text-align: center;
+    margin-top: 20px;
+}
+
+.countdown-container {
+    padding: 5px;
+    margin-top: 25px;
+    border-radius: 10px;
+    display: inline-block; 
+}
+
+.secret-spot-text {
+    font-size: 1.5rem;
+    color: #39FF14; /* Verde neón */
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.8),
+                 0 0 20px rgba(57, 255, 20, 0.8),
+                 0 0 30px rgba(57, 255, 20, 0.8);
+}
+
+.line-up-time {
+    color: #39FF14; /* Verde neón */
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.8),
+                 0 0 20px rgba(57, 255, 20, 0.8),
+                 0 0 30px rgba(57, 255, 20, 0.8);
+}
+
+@media (max-width: 768px) {
+    .neon-text {
+        font-size: 1.5rem;
+    }
+    .line-up-img {
+        width: 55%; /* Ajuste para dispositivos móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    .neon-text {
+        font-size: 1.2rem;
+    }
+    .line-up-img {
+        width: 55%; /* Ajuste para dispositivos móviles pequeños */
+    }
+}

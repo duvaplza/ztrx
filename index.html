@@ -3,48 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inauguración Zatirx Flyer</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        background: url("your-background-image.jpg") no-repeat center center
-          fixed;
-        background-size: cover;
-      }
-      .neon-text {
-        color: #fff;
-        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8),
-          0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 0, 255, 0.8),
-          0 0 40px rgba(255, 0, 255, 0.8), 0 0 80px rgba(255, 0, 255, 0.8),
-          0 0 120px rgba(255, 0, 255, 0.8);
-      }
-    </style>
+    <title>🧿</title>
+    <link href="style.css" rel="stylesheet" />
   </head>
-  <body
-    class="flex flex-col items-center justify-center min-h-screen bg-black text-white"
-  >
-    <div class="text-center p-6">
-      <h1 class="text-5xl neon-text">Inauguración Zatirx</h1>
-      <p class="text-2xl mt-4 neon-text">July 20</p>
+  <body>
+    <div class="background">
+      <canvas id="backgroundCanvas"></canvas>
     </div>
-    <div class="p-6 text-center">
-      <h2 class="text-3xl neon-text">Line Up</h2>
-      <div class="mt-4">
-        <p class="text-xl neon-text">Delamotta - MinimalDeep | Groove</p>
-        <p class="text-xl neon-text">Dopamind - Techno | Electrónica</p>
-        <p class="text-xl neon-text">Torture - Old-SchoolHardstyle | Raw</p>
-        <p class="text-xl neon-text">Y105H1 - HardTechno | Raw</p>
-        <p class="text-xl neon-text">Sadik - Raw</p>
-        <p class="text-xl neon-text">DarkPepi - Hardcore</p>
+    <div class="container">
+      <div class="text-center p-6">
+        <h1 class="neon-text">👹 INAUGURACIÓN ZÁTIRX 👹</h1>
+      </div>
+      <div class="text-center p-6">
+        <img src="LINE UP.png" alt="Line Up" class="line-up-img" />
+      </div>
+      <div class="countdown-container">
+        <h3 class="secret-spot-text">SECRET SPOT...</h3>
+        <div id="countdown" class="countdown line-up-time"></div>
+        <p id="secret-spot" class="secret-spot-text" style="display: none">
+          <span>Barros Arana 86, 4270487 Concepción, Talcahuano, Bío Bío</span>
+        </p>
       </div>
     </div>
-    <div class="p-6 text-center mt-6">
-      <p class="text-xl neon-text">Secret Spot</p>
-      <p class="text-xl neon-text">$5000 Entry Fee</p>
-      <p class="text-xl neon-text">2x$7000 VIP</p>
-    </div>
+    <audio id="backgroundMusic" loop>
+      <source src="suspense_2.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+    <script src="script.js"></script>
+    <script src="background.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const backgroundMusic = document.getElementById("backgroundMusic");
+        backgroundMusic.play().catch((error) => {
+          console.log("Music playback failed:", error);
+        });
+
+        // Verificar si la cuenta regresiva ya ha terminado
+        const eventDate = new Date("July 20, 2024 17:59:59").getTime();
+        const now = new Date().getTime();
+        if (now >= eventDate) {
+          document.getElementById("countdown").style.display = "none";
+          document.getElementById("secret-spot").style.display = "block";
+        }
+      });
+    </script>
   </body>
 </html>
