@@ -1,5 +1,5 @@
 function countdown() {
-  const eventDate = new Date("July 20, 2024 17:59:59").getTime(); // Establecer una fecha pasada para prueba
+  const eventDate = new Date("July 20, 2024 18:30:59").getTime(); // Establecer una fecha pasada para prueba
   const now = new Date().getTime();
   const distance = eventDate - now;
 
