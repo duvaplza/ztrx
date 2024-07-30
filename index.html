@@ -1,50 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>🧿</title>
-    <link href="style.css" rel="stylesheet" />
+    <title>ZátirxCircus</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
   <body>
-    <div class="background">
-      <canvas id="backgroundCanvas"></canvas>
+    <div id="background">
+      <img
+        src="guirnaldas.png"
+        class="garland"
+        id="garland-top-left"
+        alt="Guirnalda Izquierda"
+      />
+      <img
+        src="guirnaldas.png"
+        class="garland"
+        id="garland-top-right"
+        alt="Guirnalda Derecha"
+      />
     </div>
-    <div class="container">
-      <div class="text-center p-6">
-        <h1 class="neon-text">👹 INAUGURACIÓN ZÁTIRX 👹</h1>
-      </div>
-      <div class="text-center p-6">
-        <img src="LINE UP.png" alt="Line Up" class="line-up-img" />
-      </div>
-      <div class="countdown-container">
-        <h3 class="secret-spot-text">SECRET SPOT...</h3>
-        <div id="countdown" class="countdown line-up-time"></div>
-        <p id="secret-spot" class="secret-spot-text" style="display: none">
-          <span>Barros Arana 86, 4270487 Concepción, Talcahuano, Bío Bío</span>
-        </p>
+    <div id="content">
+      <h1 class="main-title">¡Bienvenidos!</h1>
+      <h1 class="main-title">ZátirxCircus</h1>
+      <div id="countdown"></div>
+      <div id="instagram">
+        <a href="https://instagram.com/proyectozatira" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
       </div>
     </div>
+    <script src="countdown.js"></script>
+    <script src="effects.js"></script>
     <audio id="backgroundMusic" loop>
-      <source src="suspense_2.mp3" type="audio/mpeg" />
+      <source src="circus.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
-    <script src="script.js"></script>
-    <script src="background.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", (event) => {
         const backgroundMusic = document.getElementById("backgroundMusic");
         backgroundMusic.play().catch((error) => {
           console.log("Music playback failed:", error);
         });
-
-        // Verificar si la cuenta regresiva ya ha terminado
-        const eventDate = new Date("July 20, 2024 18:30:59").getTime();
-        const now = new Date().getTime();
-        if (now >= eventDate) {
-          document.getElementById("countdown").style.display = "none";
-          document.getElementById("secret-spot").style.display = "block";
-        }
       });
     </script>
   </body>
