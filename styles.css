@@ -135,14 +135,117 @@ h1.main-title:hover {
     font-size: 3.5em;
     text-decoration: none;
     text-shadow:
-    1px 1px 0 #ffffff,
-    2px 2px 0 #000,
-    3px 3px 0 #000,
-    4px 4px 0 #000,
-    5px 5px 0 #000;
-transition: transform 0.3s, color 0.3s;
+        1px 1px 0 #ffffff,
+        2px 2px 0 #000,
+        3px 3px 0 #000,
+        4px 4px 0 #000,
+        5px 5px 0 #000;
+    transition: transform 0.3s, color 0.3s;
 }
 
 #instagram a:hover {
     color: #ff000080; /* Cambia el color cuando el ícono se pasa por encima */
+}
+
+/* Media queries para hacer la página responsive */
+@media (max-width: 768px) {
+    h1.main-title {
+        font-size: 2.5em;
+        text-shadow:
+            1px 1px 0 #ffffff,
+            2px 2px 0 #000,
+            3px 3px 0 #000;
+    }
+
+    #countdown {
+        font-size: 1.5em;
+        padding: 8px;
+    }
+
+    #instagram a {
+        font-size: 2.5em;
+    }
+
+    .garland {
+        width: 700px;
+        top: -120px;
+    }
+
+    #garland-top-left {
+        left: 50%;
+        width: 410px;
+        transform: translateX(-50%);
+    }
+
+    #garland-top-right {
+        display: none;
+    }
+}
+
+/* Media queries para hacer la página responsive */
+@media (max-width: 1024px) { /* Ajustes para tabletas */
+    h1.main-title {
+        font-size: 2.5em;
+        text-shadow:
+            1px 1px 0 #ffffff,
+            2px 2px 0 #000,
+            3px 3px 0 #000;
+    }
+
+    #countdown {
+        font-size: 1.5em;
+        padding: 8px;
+    }
+
+    #instagram a {
+        font-size: 2.5em;
+    }
+
+    .garland {
+        width: 720px;
+        top: -120px;
+    }
+
+    #garland-top-left {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #garland-top-right {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    h1.main-title {
+        font-size: 2em;
+        text-shadow:
+            1px 1px 0 #ffffff,
+            2px 2px 0 #000;
+    }
+
+    #countdown {
+        font-size: 1.2em;
+        padding: 5px;
+    }
+
+    #instagram a {
+        font-size: 2em;
+    }
+
+    .garland {
+        width: 480px;
+        top: -80px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #garland-top-left {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #garland-top-right {
+        display: none;
+    }
 }
