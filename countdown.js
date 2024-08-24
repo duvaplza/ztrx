@@ -1,7 +1,7 @@
 // countdown.js
 
 // Set the date we're counting down to
-var countDownDate = new Date("Aug 24, 2024 00:00:00").getTime();
+var countDownDate = new Date("Aug 24, 2024 23:00:00").getTime();
 
 // Function to update the countdown
 function updateCountdown() {
@@ -22,9 +22,31 @@ function updateCountdown() {
     days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
   // If the count down is over, write some text
+  // If the count down is over, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("countdown").innerHTML = "nao nao";
+
+    // Obtener el elemento con id "countdown"
+    var countdownElement = document.getElementById("countdown");
+
+    // Limpiar el contenido actual
+    countdownElement.innerHTML = "";
+
+    // Crear un elemento de imagen
+    var img = document.createElement("img");
+    img.src = "LINE UP.png"; // Ruta de la imagen
+    img.alt = "Line Up"; // Texto alternativo para la imagen
+    img.classList.add("line-up-image"); // Asigna la clase
+
+    // Agregar la imagen al elemento countdown
+    countdownElement.appendChild(img);
+
+    // Crear un párrafo para la ubicación
+    var locationText = document.createElement("p");
+    locationText.innerHTML = "Ubicación: Ruinas"; // Puedes agregar más texto aquí si lo necesitas
+
+    // Agregar el párrafo al elemento countdown
+    countdownElement.appendChild(locationText);
   }
 }
 

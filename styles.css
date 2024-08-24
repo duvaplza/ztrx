@@ -119,7 +119,7 @@ h1.main-title:hover {
 
 #countdown {
     font-size: 2em;
-    background-color: #ff000080; /* Fondo rojo semi-transparente */
+    /* background-color: #ff000080; Fondo rojo semi-transparente */
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 20px; /* Espacio debajo de la cuenta regresiva */
@@ -248,4 +248,12 @@ h1.main-title:hover {
     #garland-top-right {
         display: none;
     }
+}
+
+.line-up-image {
+    width: 80%; /* Ajusta el tamaño según sea necesario */
+    max-width: 400px; /* Tamaño máximo para la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 0px 0; /* Espacio alrededor de la imagen */
+    border-radius: 10px; /* Opcional: agrega bordes redondeados */
 }
