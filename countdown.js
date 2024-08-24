@@ -43,7 +43,7 @@ function updateCountdown() {
 
     // Crear un párrafo para la ubicación
     var locationText = document.createElement("p");
-    locationText.innerHTML = "Ubicación: Ruinas"; // Puedes agregar más texto aquí si lo necesitas
+    locationText.innerHTML = "Ubicación: (-36.8357748, -73.0576628)"; // Puedes agregar más texto aquí si lo necesitas
 
     // Agregar el párrafo al elemento countdown
     countdownElement.appendChild(locationText);
